@@ -1,6 +1,5 @@
 class Solution {
     public boolean isPalindrome(int x) {
-        boolean res = false;
         if(x<0){
            return false;
         }
@@ -10,11 +9,9 @@ class Solution {
             rev = rev*10 + x%10;
             x = x/10;
         }
-        if(temp == rev){
-             res=  true;
-        }
+        
 
-        return res;
+        return temp == rev;
 
 
         
