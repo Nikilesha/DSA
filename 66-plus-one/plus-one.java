@@ -5,7 +5,10 @@ class Solution {
                 digits[i]++;
                 return digits;
             }
-            digits[i] = 0;
+            else{
+
+                digits[i] = 0;
+            }
 
         }
 
