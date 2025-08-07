@@ -1,7 +1,6 @@
 class Solution {
     public int fib(int n) {
         /*
-        recursive
         if(n<=1){
             return n;
         }
