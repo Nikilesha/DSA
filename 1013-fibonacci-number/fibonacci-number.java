@@ -8,7 +8,6 @@ class Solution {
         
         return fib(n-1)+fib(n-2);
         */
-        // normal
         if(n<=1){
             return n;
         }
