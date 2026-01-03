@@ -5,19 +5,15 @@ class Solution {
         }
         
         int left = 0;
-        int right = 1;
-        while(right <= nums.length-1){
-            if(nums[left]!=nums[right]){
+        for(int right = 1;right < nums.length;right++){
+            if(nums[left] != nums[right]){
                 left++;
                 nums[left] = nums[right];
-                right++;
-            }
-            else{
-                right++;
-            }
-        }
 
-        return left + 1;
+            }
+            
+        }
         
+        return left + 1;
     }
 }
