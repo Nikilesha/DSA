@@ -21,11 +21,8 @@ class Solution {
         HashSet<Integer> map = new HashSet<>();
 
         for(int num:nums){
-            if(map.contains(num)){
+            if(!map.add(num)){
                 return true;
-            }
-            else{
-                map.add(num);
             }
         }
         return false;
