@@ -1,6 +1,8 @@
 import java.util.*;
 class Solution {
     public boolean containsDuplicate(int[] nums) {
+        /*
+        //MY APPROACH
         HashMap<Integer,Integer> map = new HashMap<>();
         boolean hasDuplicates = false; 
         for(int num : nums){
@@ -14,5 +16,17 @@ class Solution {
         }
 
         return hasDuplicates;
+        */
+
+        HashSet<Integer> map = new HashSet<>();
+
+        for(int num:nums){
+            if(!map.add(num)){
+                return true;
+            }
+        }
+        return false;
+
+
     }
 }
