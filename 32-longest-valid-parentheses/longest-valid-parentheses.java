@@ -14,8 +14,7 @@ class Solution {
                     stack.push(i);
                 }
                 else{
-                    int length = i - stack.peek();
-                    maxLength = Math.max(length,maxLength);
+                    maxLength = Math.max(i - stack.peek(),maxLength);
                 }
             }
         }
