@@ -1,10 +1,24 @@
 class Solution {
     public int[] sortedSquares(int[] nums) {
-        for(int i = 0;i<nums.length;i++){
-            nums[i]  = nums[i] * nums[i];
-        }
+        int[] result = new int[nums.length];
+        int left = 0;
+        int right = nums.length-1;
+        int k = nums.length-1;
 
-        Arrays.sort(nums);
-        return nums;
+        while(left <= right){
+            int leftSq = nums[left] * nums[left];
+            int rightSq = nums[right] * nums[right];
+
+            if(leftSq > rightSq){
+                result[k] = leftSq;
+                left++;
+            }
+            else{
+                result[k] = rightSq;
+                right--;
+            }
+            k--;
+        }
+        return result;
     }
 }
