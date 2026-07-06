@@ -13,7 +13,7 @@ class Solution {
 
         return new int[] {};
         */
-        /*
+        
         HashMap<Integer,Integer> map = new HashMap<>();
         
         for(int i =0;i<nums.length;i++){
@@ -26,30 +26,6 @@ class Solution {
         }
 
         return new int[] {};
-
-    */
-
-    if(nums.length == 0){
-            return new int[] {};
-        }
-        int i=0;
-        int j = nums.length -1;
-        
-        while(i != nums.length && i <=j){
-            if(nums[i]+nums[j] == target){
-                return new int[] {i,j};
-            }else{
-                j--;
-            }
-            
-            if(i == j){
-                j = nums.length -1;
-                i++;
-            }
-        }
-        
-        return new int[] {};
-
 
     }
 }
